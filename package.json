@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/OPthyago/api-financa/issues"
   },
-  "homepage": "https://github.com/OPthyago/api-financa#readme"
+  "homepage": "https://github.com/OPthyago/api-financa#readme",
+  "devDependencies": {
+    "git-commit-msg-linter": "^3.0.0"
+  }
 }
+ 
