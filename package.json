@@ -1,0 +1,20 @@
+{
+  "name": "api-financa",
+  "version": "1.0.0",
+  "description": "API de um sistema de controle financeiro pessoal, com cadastro de categorias, subcategorias, rendas, despesas, cartão de credito e etc. Será possível obter relatórios das despesas, fluxo de caixa dentre outros.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OPthyago/api-financa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OPthyago/api-financa/issues"
+  },
+  "homepage": "https://github.com/OPthyago/api-financa#readme"
+}
