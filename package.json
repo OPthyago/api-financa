@@ -4,9 +4,12 @@
   "description": "API de um sistema de controle financeiro pessoal, com cadastro de categorias, subcategorias, rendas, despesas, cartão de credito e etc. Será possível obter relatórios das despesas, fluxo de caixa dentre outros.",
   "main": "index.js",
   "scripts": {
-    "test": "jest --passWithNoTests --watch",
-    "test:staged": "jest --passWithNoTests",
-    "test:pr": "jest --passWithNoTests"
+    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
+    "test:verbose": "jest --passWithNoTests --runInBand",
+    "test:unit": "npm test -- --watch -c jest-unit-config.js",
+    "test:integration": "npm test -- --watch -c jest-integration-config.js",
+    "test:staged": "npm test -- --findRelatedTests",
+    "test:ci": "npm test -- --coverage"
   },
   "repository": {
     "type": "git",
