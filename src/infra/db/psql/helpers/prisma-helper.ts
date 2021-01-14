@@ -11,7 +11,6 @@ export const PrismaHelper = {
   async disconnect (): Promise<void> {
     this.client.$disconnect()
     this.client = null
-    console.log(this.client)
   },
 
   async map (obj: any): Promise<any> {
