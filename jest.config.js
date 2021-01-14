@@ -3,6 +3,7 @@ module.exports = {
   collectCoverageFrom: [
     '<rootDir>/src/**/*.ts',
     '!<rootDir>/src/**/*-protocols.ts',
+    '!<rootDir>/src/infra/db/psql/repository/**',
     '!**/protocols/**'
   ],
   coverageDirectory: 'coverage',
