@@ -15,7 +15,7 @@ const makeAddAccountSub = (): AddAccount => {
   class AddAccountSub implements AddAccount {
     add (account: AddAccountModel): Promise<AccountModel> {
       const validAccount = {
-        id: 'valid_id',
+        id: 1,
         name: 'valid_name',
         email: 'valid_email',
         password: 'valid_password'
@@ -214,7 +214,7 @@ describe('SignUp Controller', () => {
     expect(httpResponse.statusCode).toBe(200)
     expect(httpResponse.body).toEqual(
       {
-        id: 'valid_id',
+        id: 1,
         name: 'valid_name',
         email: 'valid_email',
         password: 'valid_password'
