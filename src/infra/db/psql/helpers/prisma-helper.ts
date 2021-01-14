@@ -4,15 +4,14 @@ export const PrismaHelper = {
   client: null as unknown as PrismaClient,
 
   async connect (): Promise<PrismaClient> {
-    if (!this.client) {
-      this.client = new PrismaClient()
-    }
+    this.client = new PrismaClient()
     return this.client
   },
 
   async disconnect (): Promise<void> {
     this.client.$disconnect()
     this.client = null
+    console.log(this.client)
   },
 
   async map (obj: any): Promise<any> {
