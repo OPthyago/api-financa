@@ -9,7 +9,10 @@
     "test:unit": "npm test -- --watch -c jest-unit-config.js",
     "test:integration": "npm test -- --watch -c jest-integration-config.js",
     "test:staged": "npm test -- --findRelatedTests",
-    "test:ci": "npm test -- --coverage"
+		"test:ci": "npm test -- --coverage",
+		"prisma:migrate": "prisma migrate dev --preview-feature",
+		"prisma:introspect": "prisma introspect",
+		"prisma:generate": "prisma generate"
   },
   "repository": {
     "type": "git",
