@@ -1,14 +1,13 @@
 import request from 'supertest'
-
 import app from '../config/app'
 
 describe('Body Parser Middleware', () => {
-  test('Should parser body as json', async () => {
+  test('Should parser bosdy as json', async () => {
     app.post('/test_body_parser', (req, res) => {
       res.send(req.body)
     })
     await request(app).post('/test_body_parser')
-      .send({ name: 'Thyago' })
-      .expect({ name: 'Thyago' })
+      .send({ name: 'valid_name' })
+      .expect({ name: 'valid_name' })
   })
 })
