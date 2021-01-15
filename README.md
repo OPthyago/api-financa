@@ -12,6 +12,8 @@
   </a>
 </p>
 
+  [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=OPthyago_api-financa&metric=alert_status)](https://sonarcloud.io/dashboard?id=OPthyago_api-financa)
+
 > Backend do sistema de controle financeiro pessoal.
 
 ### 🏠 [Homepage](https://github.com/OPthyago/api-financa#readme)
