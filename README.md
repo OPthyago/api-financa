@@ -1,4 +1,7 @@
 <h1 align="center">Welcome to API Finança 👋</h1>
+
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/dashboard?id=OPthyago_api-financa)
+
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/OPthyago/api-financa#readme" target="_blank">
@@ -10,9 +13,11 @@
   <a href="https://github.com/OPthyago/api-financa/blob/master/LICENSE" target="_blank">
     <img alt="License: ISC" src="https://img.shields.io/github/license/OPthyago/API Finança" />
   </a>
+  
+  <a>
+    <img alt="Quality Gate:" src="https://sonarcloud.io/api/project_badges/measure?project=OPthyago_api-financa&metric=alert_status" />
+  </a>
 </p>
-
-  [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=OPthyago_api-financa&metric=alert_status)](https://sonarcloud.io/dashboard?id=OPthyago_api-financa)
 
 > Backend do sistema de controle financeiro pessoal.
 
@@ -46,10 +51,6 @@ npm run test
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/OPthyago/api-financa/issues). 
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
