@@ -13,3 +13,8 @@ model Account {
   email     String
   password  String
 }
+
+model Errors {
+  id        Int      @id @default(autoincrement())
+  stack     String
+}
