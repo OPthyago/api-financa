@@ -28,7 +28,7 @@
   "homepage": "https://github.com/OPthyago/api-financa#readme",
   "devDependencies": {
     "@prisma/cli": "^2.15.0",
-    "@types/bcrypt": "^3.0.0",
+    "@types/bcrypt": "^5.0.0",
     "@types/express": "^4.17.11",
     "@types/jest": "^27.0.2",
     "@types/node": "^14.14.22",
