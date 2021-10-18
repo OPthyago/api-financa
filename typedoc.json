@@ -1,0 +1,9 @@
+{
+  "entryPoints": ["src"],
+  "out": "docs/Web Server/",
+  "readme": "README.md",
+  "name": "Web Server Documentation",
+  "tsconfig": "./tsconfig.json",
+	"entryPointStrategy": "Expand",
+	"exclude": "**/node_modules/**"
+}
