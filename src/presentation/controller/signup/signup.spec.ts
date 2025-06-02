@@ -27,12 +27,12 @@ const makeAddAccountSub = (): AddAccount => {
   class AddAccountSub implements AddAccount {
     add (account: AddAccountModel): Promise<AccountModel> {
       const validAccount = {
-        id: 1,
+        id: 1, // Changed to numeric ID
         name: 'valid_name',
-        email: 'valid_email',
+        email: 'valid_email@mail.com',
         password: 'valid_password'
       }
-      return new Promise(resolve => resolve(validAccount))
+      return Promise.resolve(validAccount) // Simpler promise creation
     }
   }
   return new AddAccountSub()
@@ -63,7 +63,7 @@ describe('SignUp Controller', () => {
     await sut.handle(httpRequest)
     expect(addAccountSpy).toHaveBeenCalledWith({
       name: 'valid_name',
-      email: 'valid_email@mail.com',
+      email: 'valid_email@mail.com', // This was already correct here
       password: 'valid_password'
     })
   })
@@ -76,7 +76,7 @@ describe('SignUp Controller', () => {
     const httpRequest = makeHttpRequest()
     const httpResponse = await sut.handle(httpRequest)
     expect(httpResponse.statusCode).toBe(500)
-    expect(httpResponse.body).toEqual(new ServerError())
+    expect(httpResponse.body).toEqual(new ServerError(undefined)) // Match ServerError constructor
   })
 
   test('Should return 200 if valid data is provided ', async () => {
@@ -86,9 +86,9 @@ describe('SignUp Controller', () => {
     expect(httpResponse.statusCode).toBe(200)
     expect(httpResponse.body).toEqual(
       {
-        id: 1,
+        id: 1, // Changed to numeric ID
         name: 'valid_name',
-        email: 'valid_email',
+        email: 'valid_email@mail.com',
         password: 'valid_password'
       }
     )
@@ -108,5 +108,16 @@ describe('SignUp Controller', () => {
     const httpRequest = makeHttpRequest()
     const httpResponse = await sut.handle(httpRequest)
     expect(httpResponse).toEqual(badRequest(new MissingParamError('any_field')))
+  })
+
+  test('Should return 500 if Validation throws', async () => {
+    const { sut, validationSub } = makeSut()
+    jest.spyOn(validationSub, 'validate').mockImplementationOnce(() => {
+      throw new Error() // Simulate Validator throwing an unexpected error
+    })
+    const httpRequest = makeHttpRequest()
+    const httpResponse = await sut.handle(httpRequest)
+    expect(httpResponse.statusCode).toBe(500)
+    expect(httpResponse.body).toEqual(new ServerError(undefined)) // Match ServerError constructor
   })
 })
